@@ -51,5 +51,5 @@ RUN echo "aws_keys={'access_key':AWS_ACCESS_KEY_ID,'secret_key':AWS_SECRET_ACCES
 CMD ["python","prefect-ecs.py"]
 
 # Start Prefect ECS Agent on Cluster: my-prefect
-CMD ["prefect","agent","ecs","start","--cluster","arn:aws:ecs:ap-southeast-2:776883799019:cluster/my-prefect","--label","s
-imple-prefect-task-2","--name","ECS-Task-Container"]
+CMD ["prefect","agent","ecs","start","--cluster","arn:aws:ecs:ap-southeast-2:776883799019:cluster/my-prefect","--label", \
+   "simple-prefect-task-2","--name","ECS-Task-Container"]
