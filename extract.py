@@ -2,9 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+# setting maximum column width and float format for data preservation
 pd.set_option('display.max_colwidth', -1)
 pd.set_option('display.float_format', '{:.10f}'.format)
 
+# the function below scraps top crypto gainers table from https://coinmarketcap.com/gainers-losers/
 def top_gainers_today():
     # coin martket cap for top gainers and loser, updated everyday
     URL = "https://coinmarketcap.com/gainers-losers/"
@@ -31,6 +33,7 @@ def top_gainers_today():
     top_gainers = pd.DataFrame(gainers, columns = ['Name', 'Symbol', 'Price', 'Gain_Percentage', 'Volume', 'Href'])
     return top_gainers
 
+# the function returns current exchange rate for AUD/USD pair from https://wise.com/au/currency-converter/usd-to-aud-rate
 def get_exchange_rate():
     URL = 'https://wise.com/au/currency-converter/usd-to-aud-rate'
     r = requests.get(URL)
