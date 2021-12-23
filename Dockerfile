@@ -29,6 +29,9 @@ ENV AWS_ACCESS_KEY_ID="your-access-key"
 ENV AWS_SECRET_ACCESS_KEY="your-secret-key"
 ENV AWS_DEFAULT_REGION="your-default-region"
 
+# Not safe to inject AWS credentials like this, should provide them using SSM parameter store
+# or use multistage build and hide them in a private repository
+
 # Create a new prefect project
 RUN prefect create project "ECS-Task-Container"
 
