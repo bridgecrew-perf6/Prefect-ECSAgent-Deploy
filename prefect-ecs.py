@@ -63,7 +63,7 @@ with Flow("Scrap-Top-Gainers", schedule=schedule, run_config=run_config, storage
     logger.info("Data load to S3 - Top Crypto Gainers Bucket - succesful!")
 
 # registering your flow to prefect project
-flow.register(project_name="ECS-Fargate")
+flow.register(project_name="ECS-Task-Container")
 
 #client = Client()
 #client.create_flow_run(version_group_id = "b7d03774-17ff-45aa-8ed5-18ca4221790d")
