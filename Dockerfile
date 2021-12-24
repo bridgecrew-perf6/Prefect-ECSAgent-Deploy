@@ -55,4 +55,4 @@ CMD ["python","prefect-ecs.py"]
 
 # Start Prefect ECS Agent on Cluster: my-prefect
 CMD ["prefect","agent","ecs","start","--cluster","arn:aws:ecs:ap-southeast-2:776883799019:cluster/my-prefect","--label", \
-   "simple-prefect-task-2","--name","ECS-Task-Container"]
+   "simple-prefect-task","--name","ECS-Task-Agent"]
