@@ -7,7 +7,9 @@ The repository creates a Prefect flows and registers it to Prefect Project. The 
 
 The three of these abovementioned functions are processed into a flow, in the file prefect-ecs.py. 
 
-Further a Dockerfile is created that that could register a flow, set up and run Prefect ECS Agent. The ECR Image can be found [here](https://gallery.ecr.aws/s0c5i6w0/prefect-service-image)
+Further a Dockerfile is created that that could register a flow, set up and run Prefect ECS Agent. The ECR Image can be found [here](https://gallery.ecr.aws/s0c5i6w0/prefect-service-image).
+
+The CDK App that will be deploying this Prefect flow can be found [here](https://github.com/usamatrq94/Prefect-CDK-Deployment).
 
 # Deployment Procedure
 
