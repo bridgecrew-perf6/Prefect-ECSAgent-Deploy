@@ -39,7 +39,7 @@ schedule = IntervalSchedule(
 run_config = ECSRun(
         image="public.ecr.aws/s0c5i6w0/prefect-task-image:latest",
         task_role_arn="arn:aws:iam::776883799019:role/ecsTaskExecutionRole",
-        labels=['Alb-Fargate-Flow']
+        labels=['Alb-Fargate-Flow-1','Alb-Fargate-Flow-2']
         )
 
 # setting flow storage to S3 bucket. Whenever flow and polling agent are registered on different containers,
