@@ -39,7 +39,7 @@ schedule = IntervalSchedule(
 run_config = ECSRun(
         image="public.ecr.aws/s0c5i6w0/prefect-task-image:latest",
         task_role_arn="arn:aws:iam::776883799019:role/ecsTaskExecutionRole",
-        labels=['simple-prefect-task']
+        labels=['Alb-Fargate-Flow']
         )
 
 # setting flow storage to S3 bucket. Whenever flow and polling agent are registered on different containers,
@@ -63,7 +63,7 @@ with Flow("Scrap-Top-Gainers", schedule=schedule, run_config=run_config, storage
     logger.info("Data load to S3 - Top Crypto Gainers Bucket - succesful!")
 
 # registering your flow to prefect project
-flow.register(project_name="ECS-Task-Container")
+flow.register(project_name="Alb-Fargate")
 
 #client = Client()
 #client.create_flow_run(version_group_id = "b7d03774-17ff-45aa-8ed5-18ca4221790d")
