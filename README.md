@@ -64,7 +64,7 @@ Building Docker Image
 ```
 docker build -t prefect-service-image .
 ```
-## 6. Taging and Pushing Image to ECR Public Repository
+## 6. Tagging and Pushing Image to ECR Public Repository
 
 After the build completes, tag your image so you can push the image to this repository:
 ```
